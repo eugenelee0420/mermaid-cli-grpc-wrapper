@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package mermaid_cli;
+
+message GenerateImageRequest {
+    string source = 1;
+}
+
+message GenerateImageResponse {
+    string id = 1;
+    bytes image_data = 2;
+}
+
+service Mermaid {
+    rpc generateImage(GenerateImageRequest) returns (GenerateImageResponse) {}
+}

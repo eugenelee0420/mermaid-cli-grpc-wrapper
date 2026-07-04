@@ -1,0 +1,20 @@
+{
+  "name": "mermaid-cli-grpc-wrapper-new",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+  	"@grpc/grpc-js": "^1.14.4",
+    "@grpc/proto-loader": "^0.8.1",
+    "@mermaid-js/mermaid-cli": "^11.16.0",
+    "pino": "^10.3.1"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2"
+  }
+}
