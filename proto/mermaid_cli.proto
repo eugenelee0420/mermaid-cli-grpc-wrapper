@@ -12,5 +12,5 @@ message GenerateImageResponse {
 }
 
 service Mermaid {
-    rpc generateImage(GenerateImageRequest) returns (GenerateImageResponse) {}
+    rpc generate_image(GenerateImageRequest) returns (GenerateImageResponse) {}
 }

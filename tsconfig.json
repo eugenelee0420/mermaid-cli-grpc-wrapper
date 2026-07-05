@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2023",
-    "module": "node20",
-    "lib": ["ES2023"],
+    "target": "es2017",
+    "module": "preserve",
+    // "lib": ["ES2023"],
     "types": ["vite/client"],
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
