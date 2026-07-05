@@ -67,7 +67,9 @@ const handlers: MermaidHandlers = {
 
     try {
       reqLogger.info({ msg: "Invoking mermaid-cli", inputFile, tmpFolderPath });
-      await run(inputFile, `${requestId}.png`, { artefacts: tmpFolderPath });
+      await run(inputFile, `${requestId}.png`, { artefacts: tmpFolderPath, puppeteerConfig: {
+        args: ['--no-sandbox']
+      } });
     } catch (e) {
       reqLogger.error({ msg: "Failed to run mermaid-cli", err: e });
       callback({

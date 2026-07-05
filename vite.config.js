@@ -2,14 +2,17 @@ import {defineConfig} from 'vite';
 
 import packageJson from "./package.json";
 
+/*
 const dependencies = new Set(Object.keys({
   ...packageJson.dependencies,
   // ...packageJson.devDependencies,
 }));
+*/
 
-dependencies.delete('@mermaid-js/mermaid-cli');
+// dependencies.delete('@mermaid-js/mermaid-cli');
+// dependencies.add('@js-sdsl/ordered-map');
 
-console.log('Bundling dependencies', Array.from(dependencies.keys()));
+// console.log('Bundling dependencies', Array.from(dependencies.keys()));
 
 /** @type {import('vite').UserConfig} */
 export default defineConfig({
@@ -19,6 +22,10 @@ export default defineConfig({
   },
   ssr: {
     target: 'node',
-    noExternal: Array.from(dependencies.keys())
+    // noExternal: Array.from(dependencies.keys())
+    noExternal: true,
+    external: [
+      '@mermaid-js/mermaid-cli'
+    ]
   }
 })

@@ -1,0 +1,6 @@
+services:
+  mermaid:
+    image: mermaid-cli-grpc-wrapper:latest
+    env_file: .env
+    ports:
+      - "62073:62073"
